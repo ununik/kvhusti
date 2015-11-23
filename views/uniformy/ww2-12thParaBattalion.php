@@ -18,10 +18,9 @@ for($i=1; $i < 7; $i++){
 
 $container .= "<div>Zdroje:
                 <ul>
-                    <li>J. Bouchery a P. Charbonnier,D-Day Paratroopers, Historie & Collections, Paris 2004, ISBN: 2-915239-31-2</li>
-                    <li>J. Bouchery, The British Tommy in nort west Europe 1944-1945, volume 1, Historie & Collections, Paris 1998, ISBN: 2-908182-44-0</li>
-                    <li>M. J. Brayley, British web equipment of two word wars, the Crowood press Ltd. Ramsbury 2008, ISBN: 978-1-86126-743-6</li>
-                    <li>G. R. Rottman, Taktika vzdušných výsadkových vojsk ve 2. světové válce, Grada Publishing, Praha 2007, ISBN: 978-80-247-1900-9</li>
+                    <li>Bouchery J. The British Tommy in nort west Europe 1944-1945, volume 1, Historie & Collections, Paris 1998, ISBN: 2-908182-44-0</li>
+                    <li>Chappel M. British Battle Insignia 2 1939-45, Osprey publishing, Oxford 1987, ISBN: 0-85045-739-4</li>
+                    <li>Jewell B. British Battledress 1937-1961, Osprey publishing Ltd. London 1981, ISBN: 0-85045-387-9</li>
                 </ul>
                 </div>";
 return $container;

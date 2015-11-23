@@ -11,8 +11,8 @@ return "<ul>
                 <ul>
                     <li><a href='index.php?page=uniformy&subpage=ww2'>WW2</a>
                         <ul>
-                            <li><a href='index.php?page=uniformy&subpage=ww2&category=engeneers'>Královští ženisté</a></li>
-                            <li><a href='index.php?page=uniformy&subpage=ww2&category=seaforth'>Seaforth Heighlanders</a></li>
+                            <li><a href='index.php?page=uniformy&subpage=ww2&category=engeneers'>Royal Engineers</a></li>
+                            <li><a href='index.php?page=uniformy&subpage=ww2&category=seaforth'>Seaforth Highlanders</a></li>
                             <li><a href='index.php?page=uniformy&subpage=ww2&category=12thParaBattalion'>12th parachute battalion</a></li>
                         </ul>
                     </li>

@@ -5,11 +5,11 @@
  * Date: 14. 9. 2015
  * Time: 7:32
  */
-$container = "<h2>Velká británie</h2>";
+$container = "<h2>VelkÃ¡ britÃ¡nie</h2>";
 $container .= "<ul>
-                <li><a href='index.php?page=uniformy&subpage=GB&category=engeneers'>Královští enisté</a></li>
-                <li><a href='index.php?page=uniformy&subpage=GB&category=seaforth'>Seaforth Heighlanders</a></li>
-                <li><a href='index.php?page=uniformy&subpage=GB&category=12thParaBattalion'>12th parachute battalion</a></li>
+                <li><a href='index.php?page=uniformy&subpage=ww2&category=engeneers'>KrÃ¡lovÅ¡tÃ­ Å¾enistÃ©</a></li>
+                <li><a href='index.php?page=uniformy&subpage=ww2&category=seaforth'>Seaforth Heighlanders</a></li>
+                <li><a href='index.php?page=uniformy&subpage=ww2&category=12thParaBattalion'>12th parachute battalion</a></li>
               </ul>";
 
 return $container;

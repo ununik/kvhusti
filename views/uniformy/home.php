@@ -6,10 +6,10 @@
  * Time: 7:30
  */
 
-$container = "<h2>Výstroj a výzbroj</h2>";
+$container = "<h2>VÃ½stroj a vÃ½zbroj</h2>";
 
 $container .= "<ul>
-                    <li><a href='index.php?page=uniformy&subpage=GB'>Velká Británie</a></li>
+                    <li><a href='index.php?page=uniformy&subpage=ww2'>WW2</a></li>
                 </ul>";
 
 return $container;
