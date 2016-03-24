@@ -21,6 +21,7 @@ return "<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
     <a href='index.php' id='header'><h1>Klub vojenské historie<span>Ústí nad Labem</span></h1></a>
     <div id='navigation'>{$page->getNavigation()}</div>
     <div id='body'>
+    <div id='drobeckovaNavigace'>{$page->getDrobeckovaNavigace()}</div>
     <div id='content'>{$page->getContent()}</div>
     </div>
     <div id='footer'>

@@ -11,14 +11,14 @@ $container .= "<p>Jsme parta nadšenců do vojenské historie a chceme lidem uk�
 
 $container .= "<p>Naší hlavní činností je sepisování vzpomínek pamětníků, schraňování i sběratelství a rekonstrukce dobových předmětů, uniforem, medailí, zbraní. Doprovázíme, pomáháme či organisujeme rekonstrukce dobových událostí, střetů či bitev období 1914 - 1945. Dále držíme čestnou stráž u pomníků, plaket a pohřbů československých vojáků, nevojáků i civilistů, kteří položili svůj život za vlast, nebo se jinak zasloužili o její rozkvět a pád totalitních režimů, které Český národ utlačovaly. Pořádáme přednášky a besedy pro veřejnost i pro organisace, které mají o tuto tematiku zájem, a u některých ukázek vystavujeme vlastní relikvie, uniformy apod. Podílíme se nejen na musejních výstavách, ale též ve filmovém průmyslu, tisku a cestovním ruchu.</p>";
 
-$container .= "<p><strong>Věnujeme se především:</strong><br>
-Mobilisaci, napadení a následnou kapitulaci československé branné moci<br>
-Československé samostatné obrněné brigádě ve Velké Británii<br>
-Československým jednotkám na Středním a Blízkém východě<br>
-8. Armádě<br>
-		2. pluku skotských Seaforth Highlanders ve Velké válce i 2. světové válce<br>
-		Výsadkovým jednotkám Jeho veličenstva, krále Jiřího VI.<br>
-ČSLA v letech 1948-1975</p>";
+$container .= "<h3>Věnujeme se především:</h3><ul>
+<li>Mobilisaci, napadení a následnou kapitulaci československé branné moci</li>
+<li>Československé samostatné obrněné brigádě ve Velké Británii</li>
+<li>Československým jednotkám na Středním a Blízkém východě</li>
+<li>8. Armádě</li>
+<li>2. pluku skotských Seaforth Highlanders ve Velké válce i 2. světové válce</li>
+<li>Výsadkovým jednotkám Jeho veličenstva, krále Jiřího VI.</li>
+<li>ČSLA v letech 1948-1975</li></ul>";
 
 $container .= "<h3>Historie klubu</h3>";
 

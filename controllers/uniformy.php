@@ -5,6 +5,7 @@
  * Date: 14. 9. 2015
  * Time: 7:25
  */
+$page->addToDrobeckovaNavigace('<a href="index.php?page=uniformy">Výstroj a výzboroj</a>');
 if(!isset($_GET['subpage'])){
     return include_once("views/uniformy/home.php");
 }elseif(!isset($_GET['category']) && !isset($_GET['uniform'])){

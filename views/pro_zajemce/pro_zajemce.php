@@ -7,7 +7,7 @@
  */
 $container = "<h2>Pro zájemce</h2>";
 
-$container .= "<p>ato sekce je věnována všem, kteří mají zájem o členství v KVH Ústí nad Labem.</p>
+$container .= "<p>Tato sekce je věnována všem, kteří mají zájem o členství v KVH Ústí nad Labem.</p>
 
 <p>Jak je již zmíněno v článku o nás, věnujeme se re-enactmentu a livinghistory převážně britské armády.</p>
 

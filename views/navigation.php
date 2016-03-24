@@ -18,7 +18,7 @@ return "<ul>
                     </li>
                 </ul>
             </li>
-            <li>Články</li>
+            <li><a href='index.php?page=clanky'>Články</a></li>
             <li>Fotogalerie</li>
             <li><a href='index.php?page=o_nas'>O nás</a></li>
             <li><a href='index.php?page=pro_zajemce'>Pro zájemce</a></li>

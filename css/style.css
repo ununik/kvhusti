@@ -1,3 +1,11 @@
+a{
+	color: #663300;
+	text-decoration: none;
+	font-style: italic;
+}
+a:hover{
+	text-decoration: underline;
+}
 #author{
     text-align: center;
 }
@@ -12,6 +20,12 @@ body{
 #content{
     margin: 0px 200px;
     text-align: justify;
+    line-height: 1.8em;
+    font-family: sans-serif;
+}
+#drobeckovaNavigace{
+	font-size: 14px;
+	margin: 5px 200px 10px 200px;
 }
 #footer{
     color: #f6bf22;
@@ -37,6 +51,9 @@ body{
     border-radius: 5px;
     display: inline;
     text-align: center;
+}
+.imgWrapper{
+	text-align: center;
 }
 h2{
     font-size: 1.8em;
@@ -79,6 +96,7 @@ h2{
 #navigation a{
     color: #f6bf22;
     text-decoration: none;
+    font-style: normal;
 }
 #navigation li{
     display: inline-block;

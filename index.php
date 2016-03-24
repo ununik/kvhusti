@@ -16,6 +16,7 @@ if(isset($_GET['page'])){
 $page = new Page();
 
 $page->setTitle("KVH Ústí nad Labem");
+$page->addToDrobeckovaNavigace('<a href="index.php">kvhusti.cz</a>');
 
 $page->setNavigation(include_once('views/navigation.php'));
 

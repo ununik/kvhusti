@@ -5,7 +5,7 @@
  * Date: 14. 9. 2015
  * Time: 7:30
  */
-
+$page->setTitle("Výstroj a výzbroj | KVH Ústí nad Labem");
 $container = "<h2>Výstroj a výzbroj</h2>";
 
 $container .= "<ul>
