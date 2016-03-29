@@ -48,59 +48,105 @@ function deleteOsobaNaObrazku (foto, user) {
 	mypostrequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
 	mypostrequest.send(parameters)
 }
-function xxx (file) {
-	xhr = new XMLHttpReuest();
-	formData = new FromData();
-	formData.append ('file', file);
-	xhr.open ('POST', 'controllers/admin/foto/uploadFoto.php');
-	xhr.send(formData);
-	alert(xhr);
-	/*var mypostrequest=new ajaxRequest()
+function changeFotoComment(textarea, id) {
+	var mypostrequest=new ajaxRequest()
 	mypostrequest.onreadystatechange=function(){
 	 if (mypostrequest.readyState==4){
 	  if (mypostrequest.status==200 || window.location.href.indexOf("http")==-1){
-		  document.getElementById('uploadedFile').innerHTML += mypostrequest.responseText;
 	  }
 	  else{
 	   alert("An error has occured making the request")
 	  }
 	 }
 	}
-	var formData = new FormData();
-	alert(formData);
-	mypostrequest.open("POST", "controllers/admin/foto/uploadFoto.php", true);
-	mypostrequest.setRequestHeader("Content-type", file.type);
-	/*mypostrequest.setRequestHeader("X-File-Name", file.name);
-	mypostrequest.setRequestHeader("X-File-Size", file.size);
-	mypostrequest.setRequestHeader("X-File-Type", file.type);
-	formData.append ('file', file)
-	mypostrequest.send(formData)*/
+	parameters = 'text='+textarea.value+'&id='+id;
+	mypostrequest.open("POST", "controllers/admin/foto/changeComment.php", true)
+	mypostrequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+	mypostrequest.send(parameters)
 }
-function ajaxSaveUploaded(file) {
-	//formData = new FromData();
-	//formData.append ('file', file);
-	var response = $.ajax({
-			url: 'controllers/admin/foto/uploadFoto.php',
-			method: 'POST',
-			contentType: 'multipart/from-data',
-			context: document.getElementById('uploadedFile'),
-			processData: false,
-			data: file,
-			cache: 'false',
-			statusCode: {
-				404: function() {
-					alert("page not found!");
-				}
-			},
-			success: function(data){
-				document.getElementById('uploadedFile').innerHTML += data;
-			}
-	});
+function changeFotoTitle(input, id) {
+	var mypostrequest=new ajaxRequest()
+	mypostrequest.onreadystatechange=function(){
+	 if (mypostrequest.readyState==4){
+	  if (mypostrequest.status==200 || window.location.href.indexOf("http")==-1){
+	  }
+	  else{
+	   alert("An error has occured making the request")
+	  }
+	 }
+	}
+	parameters = 'text='+input.value+'&id='+id;
+	mypostrequest.open("POST", "controllers/admin/foto/changeTitle.php", true)
+	mypostrequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+	mypostrequest.send(parameters)
 }
-function uploadFoto() {
-	fotos = document.getElementById('fotos').files;
-	alert(files);
-	/*for (i; i<files.length; i++) {
-		alert(files.files[i]);
-	}*/
+function changeFotoOsoba(foto, member) {
+	var mypostrequest=new ajaxRequest()
+	mypostrequest.onreadystatechange=function(){
+	 if (mypostrequest.readyState==4){
+	  if (mypostrequest.status==200 || window.location.href.indexOf("http")==-1){
+	  }
+	  else{
+	   alert("An error has occured making the request")
+	  }
+	 }
+	}
+	parameters = 'foto='+foto+'&member='+member;
+	mypostrequest.open("POST", "controllers/admin/foto/changeFotoOsoba.php", true)
+	mypostrequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+	mypostrequest.send(parameters)
+}
+function addNewZajem(user) {
+	var text = document.getElementById('newZajem').value
+	var mypostrequest=new ajaxRequest()
+	mypostrequest.onreadystatechange=function(){
+	 if (mypostrequest.readyState==4){
+	  if (mypostrequest.status==200 || window.location.href.indexOf("http")==-1){
+		  location.reload();
+	  }
+	  else{
+	   alert("An error has occured making the request")
+	  }
+	 }
+	}
+	parameters = 'text='+text+'&user='+user;
+	mypostrequest.open("POST", "controllers/admin/profil/addZajem.php", true)
+	mypostrequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+	mypostrequest.send(parameters)
+}
+function changeZajem(id) {
+	var text = document.getElementById('zajem_' + id).value
+	var mypostrequest=new ajaxRequest()
+	mypostrequest.onreadystatechange=function(){
+	 if (mypostrequest.readyState==4){
+	  if (mypostrequest.status==200 || window.location.href.indexOf("http")==-1){
+		  location.reload();
+	  }
+	  else{
+	   alert("An error has occured making the request")
+	  }
+	 }
+	}
+	parameters = 'text='+text+'&id='+id;
+	mypostrequest.open("POST", "controllers/admin/profil/changeZajem.php", true)
+	mypostrequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+	mypostrequest.send(parameters)
+}
+function deleteZajem(id) {
+	var text = document.getElementById('zajem_' + id).value
+	var mypostrequest=new ajaxRequest()
+	mypostrequest.onreadystatechange=function(){
+	 if (mypostrequest.readyState==4){
+	  if (mypostrequest.status==200 || window.location.href.indexOf("http")==-1){
+		  location.reload();
+	  }
+	  else{
+	   alert("An error has occured making the request")
+	  }
+	 }
+	}
+	parameters = 'id='+id;
+	mypostrequest.open("POST", "controllers/admin/profil/deleteZajem.php", true)
+	mypostrequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+	mypostrequest.send(parameters)
 }

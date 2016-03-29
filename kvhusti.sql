@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Počítač: localhost
--- Vygenerováno: Úte 29. bře 2016, 07:28
+-- Vygenerováno: Úte 29. bře 2016, 16:10
 -- Verze serveru: 5.5.47-0ubuntu0.14.04.1
 -- Verze PHP: 5.5.9-1ubuntu4.14
 
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `foto` (
   `fotogalerie` int(15) NOT NULL,
   `active` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
 
 --
 -- Vypisuji data pro tabulku `foto`
@@ -78,7 +78,27 @@ CREATE TABLE IF NOT EXISTS `foto` (
 INSERT INTO `foto` (`id`, `path`, `pathBig`, `name`, `title`, `timestamp`, `author`, `comment`, `fotogalerie`, `active`) VALUES
 (1, 'images/uniformy/parachute/small/1.jpg', 'images/uniformy/parachute/large/1.jpg', 'blablalabl', 'Prvni Fotka', 0, 1, 'jdf spoafjpods jpdpsjf adsj ;fpdsajfdpsoj fapsdjpfdsj;aoijasiodj ;ofisjdf ojsdoj faodsjo fjadsoijfodsijoifjdso', 1, 1),
 (2, 'images/uniformy/parachute/small/1.jpg', 'images/uniformy/parachute/large/1.jpg', 'blablalabl', 'Druha Fotka', 0, 1, 'jdf spoafjpods jpdpsjf adsj ;fpdsajfdpsoj fapsdjpfdsj;aoijasiodj ;ofisjdf ojsdoj faodsjo fjadsoijfodsijoifjdso', 1, 1),
-(3, 'images/uniformy/parachute/small/1.jpg', 'images/uniformy/parachute/large/1.jpg', 'blablalabl', 'Tr etiFotka', 0, 1, 'jdf spoafjpods jpdpsjf adsj ;fpdsajfdpsoj fapsdjpfdsj;aoijasiodj ;ofisjdf ojsdoj faodsjo fjadsoijfodsijoifjdso', 1, 1);
+(3, 'images/uniformy/parachute/small/1.jpg', 'images/uniformy/parachute/large/1.jpg', 'blablalabl', 'Tr etiFotka', 0, 1, 'jdf spoafjpods jpdpsjf adsj ;fpdsajfdpsoj fapsdjpfdsj;aoijasiodj ;ofisjdf ojsdoj faodsjo fjadsoijfodsijoifjdso', 1, 1),
+(4, '../../../fileadmin/foto/4/_2.jpg', '../../../fileadmin/foto/4/2.jpg', '2.jpg', 'TESt', 1459255554, 1, '', 4, 1),
+(5, '../../../fileadmin/foto/4/_4.jpg', '../../../fileadmin/foto/4/4.jpg', '4.jpg', 'sdgdfgd', 1459255558, 1, '', 4, 1),
+(6, '../../../fileadmin/foto/4/_6.jpg', '../../../fileadmin/foto/4/6.jpg', '6.jpg', 'gsfdgsd', 1459255561, 1, '', 4, 1),
+(7, '../../../fileadmin/foto/4/_8.jpg', '../../../fileadmin/foto/4/8.jpg', '8.jpg', 'gdsfgsdf', 1459255563, 1, '', 4, 1),
+(8, '../../../fileadmin/foto/4/_10.jpg', '../../../fileadmin/foto/4/10.jpg', '10.jpg', 'gsdgsdf', 1459255565, 1, '', 4, 1),
+(9, '../../../fileadmin/foto/4/_12.jpg', '../../../fileadmin/foto/4/12.jpg', '12.jpg', 'gsdgsfdfdsafasdf', 1459255566, 1, 'sgdfgsdfg', 4, 1),
+(10, 'fileadmin/foto/5/_4.jpg', 'fileadmin/foto/5/4.jpg', '4.jpg', '', 1459255674, 1, '', 5, 1),
+(11, 'fileadmin/foto/5/_6.jpg', 'fileadmin/foto/5/6.jpg', '6.jpg', 'Test1', 1459255678, 1, '', 5, 1),
+(12, 'fileadmin/foto/5/_8.jpg', 'fileadmin/foto/5/8.jpg', '8.jpg', '', 1459255679, 1, '', 5, 1),
+(13, 'fileadmin/foto/5/_10.jpg', 'fileadmin/foto/5/10.jpg', '10.jpg', '', 1459255679, 1, '', 5, 1),
+(14, 'fileadmin/foto/5/_12.jpg', 'fileadmin/foto/5/12.jpg', '12.jpg', '', 1459255680, 1, '', 5, 1),
+(15, 'fileadmin/foto/5/_14.jpg', 'fileadmin/foto/5/14.jpg', '14.jpg', '', 1459255680, 1, '', 5, 1),
+(16, 'fileadmin/foto/5/_16.jpg', 'fileadmin/foto/5/16.jpg', '16.jpg', '', 1459255681, 1, '', 5, 1),
+(17, 'fileadmin/foto/5/_18.jpg', 'fileadmin/foto/5/18.jpg', '18.jpg', '', 1459255750, 1, '', 5, 1),
+(18, 'fileadmin/foto/5/_20.jpg', 'fileadmin/foto/5/20.jpg', '20.jpg', '', 1459255751, 1, '', 5, 1),
+(19, 'fileadmin/foto/5/_22.jpg', 'fileadmin/foto/5/22.jpg', '22.jpg', '', 1459255751, 1, '', 5, 1),
+(20, 'fileadmin/foto/5/_24.jpg', 'fileadmin/foto/5/24.jpg', '24.jpg', '', 1459255751, 1, '', 5, 1),
+(21, 'fileadmin/foto/5/_26.jpg', 'fileadmin/foto/5/26.jpg', '26.jpg', '223165564564546546465', 1459255752, 1, 'fasdafsd\n\n\n\nfasdasdfadsfsda', 5, 1),
+(22, 'fileadmin/foto/5/_28.jpg', 'fileadmin/foto/5/28.jpg', '28.jpg', 'Fofdsafsdas', 1459255753, 1, 'dashdasoifiosoif dsoahfasoafslkf klsadjflkasjdkfjsaldkjf;alksjflkjasdlkj\n\n\nfasdfasdfadsfds', 5, 1),
+(23, 'fileadmin/foto/5/_30.jpg', 'fileadmin/foto/5/30.jpg', '30.jpg', '', 1459255753, 1, '', 5, 1);
 
 -- --------------------------------------------------------
 
@@ -121,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `osobyNaFotkach` (
   `user` int(15) NOT NULL,
   `jmeno` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Vypisuji data pro tabulku `osobyNaFotkach`
@@ -130,7 +150,10 @@ CREATE TABLE IF NOT EXISTS `osobyNaFotkach` (
 INSERT INTO `osobyNaFotkach` (`id`, `foto`, `user`, `jmeno`) VALUES
 (2, 1, 0, 'KAret'),
 (3, 1, 2, ''),
-(4, 2, 1, '');
+(5, 2, 2, ''),
+(6, 22, 1, ''),
+(7, 21, 1, ''),
+(8, 21, 2, '');
 
 -- --------------------------------------------------------
 
@@ -174,8 +197,21 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `jmeno`, `prijmeni`, `login`, `passwordHash`, `addEntry`, `mail`, `showMail`, `facebook`, `showFacebook`, `tel`, `showTel`, `addFotogallery`) VALUES
-(1, 'Martin', 'Pribyl', 'ununik', 'Unununium111', 1, 'mail', 0, 'facebook', 0, 'muj tel', 0, 1),
+(1, 'Martin', 'Pribyl', 'ununik', '3c55acdb9b57d665013a6d6195c32daf', 1, 'mail', 1, 'facebook', 1, 'muj tel', 1, 1),
 (2, 'clen2', 'dssaf', '111', '123456', 0, '', 1, '', 1, '', 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabulky `users_zajmy`
+--
+
+CREATE TABLE IF NOT EXISTS `users_zajmy` (
+  `id` int(15) NOT NULL AUTO_INCREMENT,
+  `text` text NOT NULL,
+  `user` int(15) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

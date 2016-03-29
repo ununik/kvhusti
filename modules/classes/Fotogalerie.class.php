@@ -108,6 +108,11 @@ class Fotogalerie extends Connection
 		$result = parent::connect()->prepare("DELETE FROM `osobyNaFotkach` WHERE `foto`=:foto AND `user`=:user");
 		$result->execute(array(':foto' => $foto, ':user' => $user));
 	}
+	public function addOsobaNaObrazku($foto, $user)
+	{
+	    $result = parent::connect()->prepare("INSERT INTO `osobyNaFotkach`(`foto`, `user`) VALUES (:foto, :user)");
+	    $result->execute(array(':foto' => $foto, ':user' => $user));
+	}
 	
 	public function addNewAlbum($title, $description, $author, $date1, $date2)
 	{
@@ -127,5 +132,51 @@ class Fotogalerie extends Connection
 		));
 		
 		return $db->lastInsertId();
+	}
+	
+	public function saveFoto($path, $pathBig, $name, $title, $author, $fotogalerie)
+	{
+	    $timestamp = time();
+	    $result = parent::connect()->prepare("INSERT INTO `foto`(`path`, `pathBig`, `name`, `title`, `timestamp`, `author`, `fotogalerie`) VALUES (:path,:pathBig,:name,:title,:timestamp,:author,:fotogalerie)");
+	    $result->execute(array(
+	            ':path' => $path,
+	            ':pathBig' => $pathBig,
+	            ':name' => $name,
+	            ':timestamp' => $timestamp,
+	            ':title' => $title,
+	            ':author' => $author,
+	            ':fotogalerie' => $fotogalerie
+	    ));
+	}
+	
+	public function changeComment($id, $text)
+	{
+	    $result = parent::connect()->prepare("UPDATE `foto` SET `comment`=:text WHERE `id`=:id");
+	    $result->execute(array(
+	            ':text' => $text,
+	            ':id' => $id
+	    ));
+	}
+	public function changeFotoTitle($id, $text)
+	{
+	    $result = parent::connect()->prepare("UPDATE `foto` SET `title`=:text WHERE `id`=:id");
+	    $result->execute(array(
+	            ':text' => $text,
+	            ':id' => $id
+	    ));
+	}
+	public function checkedOnThisFoto($user, $foto)
+	{
+	    $result = parent::connect()->prepare("SELECT `id` FROM `osobyNaFotkach` WHERE `foto`=:foto AND `user`=:user LIMIT 1");
+	    $result->execute(array(
+	            ':foto' => $foto,
+	            ':user' => $user
+	    ));
+	    
+	    $pageResult = $result->fetch();
+	    if(isset($pageResult['id']) && $pageResult['id']!=0) {
+	        return 'checked';
+	    }
+	    return '';
 	}
 }

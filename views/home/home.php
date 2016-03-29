@@ -7,6 +7,8 @@
  */
 $container = "<h2>Vítejte na stránkách KVH Ústí nad Labem</h2>";
 
+$container .= '<h3>Na webu se pracuje, prosím omluvte některé nedokonalosti</h3>';
+
 $container .= '<iframe width="640" height="360" src="http://www.youtube.com/embed/fGG6Y9Uc4hs" frameborder="0" allowfullscreen></iframe>';
 
 return $container;

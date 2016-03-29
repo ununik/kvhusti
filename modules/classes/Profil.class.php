@@ -91,4 +91,37 @@ class Profil extends Connection
 				':id' => $user
 		));
 	}
+	
+	public function getAllZajmy ($id)
+	{
+	    $result = parent::connect()->prepare("SELECT * FROM `users_zajmy` WHERE `user`=:id ORDER BY `text`");
+	    $result->execute(array(':id' => $id));
+	    $pageResult = $result->fetchAll();
+	    
+	    return $pageResult;
+	}
+	
+	public function addNewZajem ($text, $user)
+	{
+	    $result = parent::connect()->prepare("INSERT INTO `users_zajmy` (`text`, `user`) VALUES (:value, :id)");
+	    return $result->execute(array(
+	            ':value' => $text,
+	            ':id' => $user
+	    ));
+	}
+	public function changeZajem ($text, $id)
+	{
+	    $result = parent::connect()->prepare("UPDATE `users_zajmy` SET `text`=:value WHERE `id`=:id");
+	    return $result->execute(array(
+	            ':value' => $text,
+	            ':id' => $id
+	    ));
+	}
+	public function deleteZajem ($id)
+	{
+	    $result = parent::connect()->prepare("DELETE FROM `users_zajmy` WHERE `id`=:id ");
+	    return $result->execute(array(
+	            ':id' => $id
+	    ));
+	}
 }

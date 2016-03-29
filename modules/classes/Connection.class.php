@@ -32,7 +32,7 @@ class Connection extends PDO
         }else{
         	//$dbh = new PDO('mysql:host=localhost;dbname=horp', 'root', 'Unununim111');
 
-            $dbh = new PDO('mysql:host=wm100.wedos.net;dbname=d18905_hpcz', 'w18905_hpcz', 'vL3REs8E');
+            $dbh = new PDO('mysql:host=mysql.webzdarma.cz;dbname=kvhusti', 'kvhusti', 'egxfpe');
             $dbh->exec("set names utf8");
             return $dbh;
         }

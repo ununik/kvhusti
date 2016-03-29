@@ -19,9 +19,11 @@ $clanky = include 'views/admin/clenove/clanky.php';
 if($profil->getId() == $member['id']) {
 	$kontakt = include 'views/admin/clenove/kontakt_upr.php';
 	$foto = include 'views/admin/clenove/foto_upr.php';
+	$omne = include 'views/admin/clenove/omne_upr.php';
 } else {
 	$kontakt = include 'views/admin/clenove/kontakt.php';
 	$foto = include 'views/admin/clenove/foto.php';
+	//$omne = include 'views/admin/clenove/omne.php';
 }
 
 return include 'views/admin/clenove/one.php';

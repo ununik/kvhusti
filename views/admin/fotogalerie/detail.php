@@ -1,10 +1,16 @@
 <?php
-$container = "<h2>$title</h2>";
+if ($member['addFotogallery'] == 1) {
+    $container = "<input type='text' value='$title' onchange='changeFotoTitle(this, \"{$foto['id']}\")'>";
+} else {
+    $container = "<h2>$title</h2>";
+}
 
 $container .= "<img src='{$foto['pathBig']}' class='foto_detail'>";
-$container .= "<p>{$foto['comment']}</p>";
-
-$container .= "Kdo je na fotce:";
+if ($member['addFotogallery'] == 1) {
+$container .= "<textarea onchange='changeFotoComment(this, \"{$foto['id']}\")'>{$foto['comment']}</textarea>";
+} else {
+    $container .= "<div>{$foto['comment']}</div>";
+}
 
 $osoby = array();
 foreach ($fotogalerie->getAllOsobyNaFotkach($foto['id']) as $osoba) {
@@ -14,6 +20,19 @@ foreach ($fotogalerie->getAllOsobyNaFotkach($foto['id']) as $osoba) {
 		$osoby[] = $osoba['jmeno'];
 	}
 }
-$container .= print_r($osoby, true);
+
+if ($member['addFotogallery'] != 1) {
+    if(count($osoby) > 0) {
+        $container .= "Kdo je na fotce:";
+        
+        $container .= implode(', ', $osoby);
+    }
+} else {
+    $container .= "Kdo je na fotce: ";
+    foreach ($profil->getAllMembers() as $memberNum) {
+        $checked = $fotogalerie->checkedOnThisFoto($memberNum['id'], $foto['id']);
+        $container .= "<br><input type='checkbox' $checked onchange='changeFotoOsoba(\"{$foto['id']}\", \"{$memberNum['id']}\")'> {$profil->getNameFromId($memberNum['id'])}";
+    }
+}
 
 return $container;

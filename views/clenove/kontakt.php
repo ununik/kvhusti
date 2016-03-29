@@ -14,7 +14,7 @@ if (
 		$container .= "<tr><td class='clenTable_left'>mail:</td><td>{$member['mail']}</td></tr>";
 	}
 	if ($member['showFacebook'] == 1 && $member['facebook'] != "") {
-		$container .= "<tr><td class='clenTable_left'>facebook:</td><td>{$member['facebook']}</td></tr>";
+		$container .= "<tr><td class='clenTable_left'>facebook:</td><td><a href='{$member['facebook']}' target='_blank'>{$member['facebook']}</a></td></tr>";
 	}
 
 	$container .= '</table>';
