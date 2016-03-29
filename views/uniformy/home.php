@@ -8,7 +8,7 @@
 $page->setTitle("Výstroj a výzbroj | KVH Ústí nad Labem");
 $container = "<h2>Výstroj a výzbroj</h2>";
 
-$container .= "<ul>
+$container .= "<ul id='listWithoutPoints'>
                     <li><a href='index.php?page=uniformy&subpage=ww2'>WW2</a></li>
                 </ul>";
 

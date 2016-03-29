@@ -11,7 +11,9 @@ class Page extends Connection
     protected $navigation;
     protected $drobeckovaNavigace = array();
     protected $content;
+    protected $script = '';
     protected $title;
+    protected $admin_log;
 
     public function setNavigation($navigation){
         $this->navigation = $navigation;
@@ -55,5 +57,51 @@ class Page extends Connection
         $pageResult = $result->fetch();
         
         return $pageResult;
+    }
+    
+    public function setAdminLog($new)
+    {
+    	$this->admin_log = $new;
+    }
+    
+    public function getAdminLog()
+    {
+    	return $this->admin_log;
+    }
+
+    public function addScript($new)
+    {
+    	$this->script .= $new;
+    }
+    public function getScript()
+    {
+    	return $this->script;
+    }
+    
+    public function getReadableDate ($timestamp1, $timestamp2 = 0)
+    {
+    	if ($timestamp2 != 0 && ($timestamp1 > $timestamp2)) {
+    		$pamet = $timestamp2;
+    		$timestamp2 = $timestamp1;
+    		$timestamp1 = $pamet;
+    	}
+    	
+    	if ($timestamp2 == 0) {
+    		return date ('j. n. Y', $timestamp1);
+    	}
+    	
+    	if (date ('Y', $timestamp1) != date ('Y', $timestamp2)) {
+    		return date ('j. n. Y', $timestamp1) .' - '.date ('j. n. Y', $timestamp2);
+    	}
+    	
+    	if (date ('n', $timestamp1) != date ('n', $timestamp2)) {
+    		return date ('j. n.', $timestamp1) . ' - ' . date ('j. n. Y', $timestamp2);
+    	}
+    	
+    	if (date ('j', $timestamp1) != date ('j', $timestamp2)) {
+    		return date ('j.', $timestamp1) . ' - ' . date ('j. n. Y', $timestamp2);
+    	}
+    	
+    	return date ('j. n. Y', $timestamp1);
     }
 }

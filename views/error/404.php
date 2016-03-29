@@ -5,6 +5,6 @@
  * Date: 15. 9. 2015
  * Time: 7:09
  */
-$container = "<h2>404 - taková stránka tu není</h2>";
+$container = "<h2>404 - takovÃ¡ strÃ¡nka tu nenÃ­</h2>";
 
 return  $container;

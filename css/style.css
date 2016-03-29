@@ -6,8 +6,44 @@ a{
 a:hover{
 	text-decoration: underline;
 }
+#adminLog{
+	width: 170px;
+	position: absolute;
+	top: 300px;
+	left: 0px;
+	padding: 7px;
+}
+.admin_log_from_div{
+	margin: 10px 0px;
+}
+.admin_log_from_div label{
+	display: block;
+}
+.admin_log_from_div input{
+	width: 100%;
+	border: none;
+	padding: 2px 3px;
+	margin-top: 2px;
+}
+.admin_log_from_submit{
+	margin: 10px auto;
+	display: block;
+}
 #author{
     text-align: center;
+}
+.block_floats {
+	width: 300px;
+	float: left;
+	margin: 5px;
+	border-radius: 7px;
+	padding: 5px 7px;
+	border: 1px dotted darkslategray;
+}
+.block_floats h3{
+	border-bottom: 1px solid darkslategray;
+	margin: 5px 0px 10px 0px;
+	padding: 0px 0px 0px 5px;
 }
 body{
     background-color: #e3d9cd;
@@ -17,15 +53,69 @@ body{
     position:relative;
     top: 250px;
 }
+.clenTable {
+	width: 100%;
+}
+.clenTable .clenTable_left{
+	width: 120px;
+	font-size: 0.85em;
+	text-align: right;
+	padding-right: 5px;
+}
 #content{
     margin: 0px 200px;
     text-align: justify;
     line-height: 1.8em;
     font-family: sans-serif;
 }
+#cislovani_stranek{
+	text-align: center;
+}
+#cislovani_stranek a{
+	border: 2px solid darkslategray;
+	text-decoration: none;
+	color: darkslategray;
+	border-radius: 4px;
+	padding: 3px 5px;
+	margin: 0px 2px;
+	font-style: normal;
+}
+#cislovani_stranek a:hover{
+	border: 2px solid brown;
+}
+#cislovani_stranek #aktualniStrana{
+	background-color: darkslategray;
+	color: #f6bf22;
+}
+#cislovani_stranek #aktualniStrana:hover{
+	border: 2px solid brown;
+	background-color: brown;
+}
 #drobeckovaNavigace{
 	font-size: 14px;
 	margin: 5px 200px 10px 200px;
+}
+.entries_autor{
+	display: inline-block;
+	font-style: italic;
+}
+.entries_all{
+	margin: 0px 0px 30px 0px;
+	padding: 15px;
+	border: 1px dotted darkslategray;
+	border-radius: 7px;
+}
+.entries_all_h3{
+	margin: 0px;
+}
+.entries_all_h3 a{
+	font-style: normal;
+	color: black;
+}
+.entries_vytvoreno{
+	display: inline-block;
+	width: 220px;
+	font-style: italic;
 }
 #footer{
     color: #f6bf22;
@@ -43,6 +133,42 @@ body{
     text-decoration: none;
     color: #f6bf22;
 }
+.foto_detail{
+	max-width: 85%;
+	max-height: 500px;
+	display: block;
+	margin: 0px auto;
+}
+.galleryWrapper{
+	text-align: center;
+}
+.galleryWrapperIMG{
+	display: inline-block;
+}
+.galleryWrapperIMG_detail{
+	display: block;
+	font-size: 15px;
+	background-color: darkslategray;
+	color: gold;
+	font-style: normal;
+	margin: 0px 5px;
+	border-radius: 0px 0px 5px 5px;
+	position: relative;
+	top: -31px;
+}
+.galleryWrapperIMG_smazat{
+	display: block;
+	font-size: 15px;
+	background-color: darkslategray;
+	color: gold;
+	font-style: normal;
+	margin: 0px 5px;
+	border-radius: 5px 5px 0px 0px;
+	text-align: center;
+	position: relative;
+	top: 31px;	
+	cursor: pointer;
+}
 .img_uniformy{
     margin: 3px 5px;
     border: 3px solid darkslategray;
@@ -57,6 +183,12 @@ body{
 }
 h2{
     font-size: 1.8em;
+    text-decoration: underline;
+}
+h3{
+	margin: 10px 0px 0px 35px;
+	padding: 0px;
+	font-style: italic;
 }
 #header {
     display: inline-block;
@@ -70,7 +202,7 @@ h2{
 #header h1{
     margin: 0px;
     position: absolute;
-    top: 15px;
+    top: 0px;
     left: 50px;
     padding: 70px 0px 0px 140px;
     height: 171px;
@@ -87,6 +219,9 @@ h2{
     position: relative;
     left: 33px;
     top: 5px;
+}
+#listWithoutPoints li{
+	display: block;
 }
 #navigation{
     position:absolute;
@@ -157,4 +292,12 @@ h2{
     height: 100%;
     width: 200px;
     background-repeat: repeat-y ;
+}
+.uniformy_logo{
+	width: 100px;
+	float: left;
+	margin: 10px 30px 10px 0px;
+}
+#wrapper{
+	clear: both;
 }

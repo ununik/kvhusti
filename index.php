@@ -1,13 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Martin
- * Date: 10. 9. 2015
- * Time: 17:06
- */
 function __autoload($name){
     include_once("modules/classes/$name.class.php");
 }
+
+session_start();
+
 if(isset($_GET['page'])){
     $getPage = $_GET['page'];
 }else{
@@ -25,5 +22,7 @@ $page->setContent(include_once("controllers/$getPage.php"));
 if($page->getContent() == ""){
     $page->setContent(include_once("controllers/404.php"));
 }
+
+$page->setAdminLog(include 'controllers/login/form.php');
 
 print include_once('views/page.php');

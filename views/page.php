@@ -15,6 +15,7 @@ return "<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
     <script src='js/lightbox2-2.05-maxwidth/js/jquery-1.7.2.min.js'></script>
     <script src='js/lightbox2-2.05-maxwidth/js/lightbox.js'></script>
     <link href='js/lightbox2-2.05-maxwidth/css/lightbox.css' rel='stylesheet' />
+    {$page->getScript()}
   <title>{$page->getTitle()}</title>
   </head>
   <body>
@@ -24,6 +25,7 @@ return "<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
     <div id='drobeckovaNavigace'>{$page->getDrobeckovaNavigace()}</div>
     <div id='content'>{$page->getContent()}</div>
     </div>
+    <div id='adminLog'>{$page->getAdminLog()}</div>
     <div id='footer'>
      <div id='navigation-footer'>{$page->getNavigation()}</div>
      <div id='author'>Vytvořil: ununik | 2015 | ununik[et]gmail.com</div>

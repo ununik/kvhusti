@@ -26,7 +26,7 @@ class Connection extends PDO
 	
     protected function realConnect(){
         if($_SERVER['HTTP_HOST'] == 'localhost' || $_SERVER['HTTP_HOST'] == '127.0.0.1') {
-            $dbh = new PDO('mysql:host=localhost;dbname=kvhusti', 'root', '');
+            $dbh = new PDO('mysql:host=localhost;dbname=kvhusti', 'root', 'Unununium111');
         	            $dbh->exec("set names utf8");
             return $dbh;
         }else{

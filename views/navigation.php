@@ -19,7 +19,8 @@ return "<ul>
                 </ul>
             </li>
             <li><a href='index.php?page=clanky'>Články</a></li>
-            <li>Fotogalerie</li>
+            <li><a href='index.php?page=fotogalerie'>Fotogalerie</a></li>
+            <li><a href='index.php?page=clenove'>Členové</a></li>
             <li><a href='index.php?page=o_nas'>O nás</a></li>
             <li><a href='index.php?page=pro_zajemce'>Pro zájemce</a></li>
             <li><a href='index.php?page=kontakt'>Kontakt</a></li>
