@@ -7,6 +7,8 @@
  */
 $container = "<h2>Pro zájemce</h2>";
 
+$container .= '<img src="images/page/pro_zajemce.jpg" class="ilustrace_float">';
+
 $container .= "<p>Tato sekce je věnována všem, kteří mají zájem o členství v KVH Ústí nad Labem.</p>
 
 <p>Jak je již zmíněno v článku o nás, věnujeme se re-enactmentu a livinghistory převážně britské armády.</p>

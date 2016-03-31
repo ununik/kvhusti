@@ -7,6 +7,8 @@
  */
 $container = "<h2>O nás</h2>";
 
+$container .= '<img src="images/page/o_nas.jpg" class="ilustrace_float">';
+
 $container .= "<p>Jsme parta nadšenců do vojenské historie a chceme lidem ukázat, jak armády, které představujeme fungovaly, co používaly a jakým způsobem a zbraněmi bojovali. Věnujeme se re-enactingu i živé historii (livinghistory), ovšem pro všechny ostatní jsme jiní blázni ve stejných uniformách, kteří se snaží lidem ukázat, jak se nejen žilo, ale i válčilo v dějinách XX. století.</p>";
 
 $container .= "<p>Naší hlavní činností je sepisování vzpomínek pamětníků, schraňování i sběratelství a rekonstrukce dobových předmětů, uniforem, medailí, zbraní. Doprovázíme, pomáháme či organisujeme rekonstrukce dobových událostí, střetů či bitev období 1914 - 1945. Dále držíme čestnou stráž u pomníků, plaket a pohřbů československých vojáků, nevojáků i civilistů, kteří položili svůj život za vlast, nebo se jinak zasloužili o její rozkvět a pád totalitních režimů, které Český národ utlačovaly. Pořádáme přednášky a besedy pro veřejnost i pro organisace, které mají o tuto tematiku zájem, a u některých ukázek vystavujeme vlastní relikvie, uniformy apod. Podílíme se nejen na musejních výstavách, ale též ve filmovém průmyslu, tisku a cestovním ruchu.</p>";

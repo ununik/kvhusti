@@ -6,6 +6,8 @@ if (!isset($_GET['id']) || $_GET['id'] == "") {
 	return include 'controllers/admin/clanky.php';
 }
 
+$page->addScript('<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>');
+
 $entryClass = new Entry();
 $entry = $entryClass->getEntry($_GET['id']);
 $nadpis = $entry['title'];

@@ -9,6 +9,9 @@ if ($clanky != '') {
 if ($omne != '') {
     $container .= "<div class='block_floats'>$omne</div>";
 }
+if ($info != '') {
+    $container .= "<div class='block_floats'>$info</div>";
+}
 
 $container .= '<div id="wrapper"></div>';
 if($foto != '') {

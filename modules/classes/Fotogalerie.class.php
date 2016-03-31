@@ -1,7 +1,7 @@
 <?php
 class Fotogalerie extends Connection
 {
-	private $_entriesOnPage = 2;
+	private $_entriesOnPage = 15;
 	private $_pageNum = 1;
 	
 	public function setPageNumber($new)
@@ -14,7 +14,7 @@ class Fotogalerie extends Connection
 	}
 	public function getAllGaleries()
 	{
-		$result = parent::connect()->prepare("SELECT * FROM `fotogalerie` WHERE `active` = 1 ORDER BY `timestamp` DESC");
+		$result = parent::connect()->prepare("SELECT * FROM `fotogalerie` WHERE `active` = 1 ORDER BY `date` DESC");
 		$result->execute();
 		$pageResult = $result->fetchAll();
 		
@@ -179,4 +179,50 @@ class Fotogalerie extends Connection
 	    }
 	    return '';
 	}
+  
+  public function resizeImage($newWidth, $targetFile, $originalFile) {
+
+    $info = getimagesize($originalFile);
+    $mime = $info['mime'];
+
+    switch ($mime) {
+        case 'image/jpeg':
+            $image_create_func = 'imagecreatefromjpeg';
+            $image_save_func = 'imagejpeg';
+            $new_image_ext = 'jpg';
+            break;
+
+        case 'image/png':
+            $image_create_func = 'imagecreatefrompng';
+            $image_save_func = 'imagepng';
+            $new_image_ext = 'png';
+            break;
+
+        case 'image/gif':
+            $image_create_func = 'imagecreatefromgif';
+            $image_save_func = 'imagegif';
+            $new_image_ext = 'gif';
+            break;
+
+        default:
+            throw Exception('Unknown image type.');
+    }
+
+    $img = $image_create_func($originalFile);
+    list($width, $height) = getimagesize($originalFile);
+
+    if ($width > $height) {
+        $newHeight = ($height / $width) * $newWidth;
+    } else {
+        $newHeight = $newWidth;
+        $newWidth = ($width / $height) * $newHeight;
+    }
+    $tmp = imagecreatetruecolor($newWidth, $newHeight);
+    imagecopyresampled($tmp, $img, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
+
+    if (file_exists($targetFile)) {
+        unlink($targetFile);
+    }
+    $image_save_func($tmp, "$targetFile.$new_image_ext");
+  }
 }

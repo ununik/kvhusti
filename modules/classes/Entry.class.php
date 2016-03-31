@@ -1,7 +1,7 @@
 <?php
 class Entry extends Connection
 {
-    private $_entriesOnPage = 2;
+    private $_entriesOnPage = 10;
     private $_pageNum = 1;
     
     public function setPageNumber($new)

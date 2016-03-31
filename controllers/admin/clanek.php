@@ -3,6 +3,7 @@ if (!isset($_GET['id']) || $_GET['id'] == "") {
 	return include 'controllers/admin/clanky.php';
 }
 
+
 $entryClass = new Entry();
 $entry = $entryClass->getEntry($_GET['id']);
 

@@ -8,10 +8,13 @@
  
  $container = "<h2>Kontakt</h2>";
  
+ $container .= '<img src="images/page/italie.jpg" class="ilustrace_float">';
+ 
  $container .= "<h3>Klub vojenské historie - Ústí nad Labem, z. s.</h3>";
  
  $container .= "<p>Kosmonautů 487/3, Bukov<br>
                  400 01 Ústí nad Labem<br>
+                 <a href='http://kvhusti.cz/'>kvhusti.cz</a><br>
                  kvhusti@email.cz</p>";
  
  $container .= "<p>tel.(Jan Drabálek) +420 607 507 047</p>";

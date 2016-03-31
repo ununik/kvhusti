@@ -25,5 +25,6 @@ if (count($allZajem) > 0) {
 } else {
     $omne = '';
 }
+$info = include 'views/clenove/informace.php';
 
 return include 'views/clenove/one.php';

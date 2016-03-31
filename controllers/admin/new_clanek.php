@@ -2,7 +2,7 @@
 if	(!$profil->get_addEntry()) {
 	return include 'controllers/admin/clanky.php';
 }
-
+$page->addScript('<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>');
 $entryClass = new Entry();
 $nadpis = '';
 $text = '';
