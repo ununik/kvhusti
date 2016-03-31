@@ -20,6 +20,7 @@ return "<ul>
             </li>
             <li><a href='index.php?page=clanky'>Články</a></li>
             <li><a href='index.php?page=fotogalerie'>Fotogalerie</a></li>
+            <li><a href='index.php?page=kalendar'>Kalendář</a></li>
             <li><a href='index.php?page=clenove'>Členové</a></li>
             <li><a href='index.php?page=o_nas'>O nás</a></li>
             <li><a href='index.php?page=pro_zajemce'>Pro zájemce</a></li>

@@ -48,11 +48,21 @@ class Profil extends Connection
 	
 	public function getNameFromId($id)
 	{
-		$result = parent::connect()->prepare("SELECT `jmeno`, `prijmeni` FROM `users` WHERE `id` = :id LIMIT 1");
+		$result = parent::connect()->prepare("SELECT `jmeno`, `prijmeni`, `prezdivka`, `login` FROM `users` WHERE `id` = :id LIMIT 1");
 		$result->execute(array(':id' => $id));
 		$pageResult = $result->fetch();
-		 
-		return $pageResult['jmeno'].' '.$pageResult['prijmeni'];
+		
+		if ($pageResult['jmeno'] != '' && $pageResult['prijmeni'] && $pageResult['prezdivka']) {
+		    return $pageResult['jmeno'].' (' . $pageResult['prezdivka'] . ') '.$pageResult['prijmeni'];
+		}
+		if ($pageResult['jmeno'] != '' && $pageResult['prijmeni']) {
+		  return $pageResult['jmeno'].' '.$pageResult['prijmeni'];
+		}
+    	if ($pageResult['login'] != '') {
+		  return $pageResult['login'];
+		}
+		
+		return $id;
 	}
 	
 	public function getId()

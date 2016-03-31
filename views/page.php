@@ -15,6 +15,7 @@ return "<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
     <script src='js/lightbox2-2.05-maxwidth/js/jquery-1.7.2.min.js'></script>
     <script src='js/lightbox2-2.05-maxwidth/js/lightbox.js'></script>
     <link href='js/lightbox2-2.05-maxwidth/css/lightbox.css' rel='stylesheet' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
     <link rel='shortcut icon' href='images/ikona.ico'/>
     {$page->getScript()}
   <title>{$page->getTitle()}</title>

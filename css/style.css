@@ -66,7 +66,7 @@ body{
     margin: 0px 200px;
     text-align: justify;
     line-height: 1.8em;
-    font-family: sans-serif;
+    font-family: 'Open Sans',monospace;
 }
 #cislovani_stranek{
 	text-align: center;
@@ -148,7 +148,7 @@ body{
 .galleryWrapperIMG_detail{
 	display: block;
 	font-size: 15px;
-	background-color: darkslategray;
+	background-color: rgba(47,79,79,0.3);
 	color: gold;
 	font-style: normal;
 	margin: 0px 5px;
@@ -156,10 +156,13 @@ body{
 	position: relative;
 	top: -31px;
 }
+.galleryWrapperIMG_detail:hover{
+	background-color: rgba(47,79,79,1);
+}
 .galleryWrapperIMG_smazat{
 	display: block;
 	font-size: 15px;
-	background-color: darkslategray;
+	background-color: rgba(47,79,79,0.3);
 	color: gold;
 	font-style: normal;
 	margin: 0px 5px;
@@ -168,6 +171,9 @@ body{
 	position: relative;
 	top: 31px;	
 	cursor: pointer;
+}
+.galleryWrapperIMG_smazat:hover{
+	background-color: rgba(47,79,79,1);
 }
 .ilustrace_float{
 	float: right;
@@ -238,6 +244,10 @@ h3{
     position: relative;
     left: 33px;
     top: 5px;
+}
+.kalendar_date{
+	width: 180px;
+	display: inline-block;
 }
 #listWithoutPoints li{
 	display: block;
@@ -322,4 +332,17 @@ h3{
 }
 #wrapper{
 	clear: both;
+}
+#zmena_obdobi{
+	font-size: 20px;
+	margin: 5px 0px 10px 100px;
+}
+#zmena_obdobi a{
+	color: gray;
+	font-style: normal;
+	margin: 0px 3px;
+}
+#zmena_obdobi .activeYear{
+	color: black;
+	font-size: 23px;
 }

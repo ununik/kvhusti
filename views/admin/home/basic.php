@@ -9,6 +9,9 @@ if($member['addEntry'] == 1) {
 if($member['addFotogallery'] == 1) {
     $container .= '<li><a href="admin.php?page=fotogalerie">Fotogalerie</a></li>';
 }
+if($member['addEvent'] == 1) {
+    $container .= '<li><a href="admin.php?page=fotogalerie">Události v kalendáři</a></li>';
+}
 
 $container.= '</ul>';
 

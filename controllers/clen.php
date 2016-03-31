@@ -9,7 +9,7 @@ $allEntriesForMember = $entries->getAllEntryForAuthor($_GET['id']);
 $member = $profil->getMember($_GET['id']);
 $jmeno = $profil->getNameFromId($member['id']);
 $profil->setId($_GET['id']);
-$allZajem = $profil->getAllZajmy($profil->getId());
+$allZajem = $profil->getAllZajmy($member['id']);
 
 
 $page->addToDrobeckovaNavigace('<a href="index.php?page=clenove">Členové</a>');

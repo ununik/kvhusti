@@ -1,5 +1,8 @@
 <?php
 $container = "<h2>$jmeno</h2>";
+if ($ja != '') {
+    $container .= "<div class='block_floats'>$ja</div>";
+}
 if ($kontakt != '') {
 	$container .= "<div class='block_floats'>$kontakt</div>";
 }
