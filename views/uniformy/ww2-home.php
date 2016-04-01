@@ -12,6 +12,7 @@ $container .= "<ul id='listWithoutPoints'>
                 <li><a href='index.php?page=uniformy&subpage=ww2&category=engeneers'>Královští ženisté</a></li>
                 <li><a href='index.php?page=uniformy&subpage=ww2&category=seaforth'>Seaforth Heighlanders</a></li>
                 <li><a href='index.php?page=uniformy&subpage=ww2&category=12thParaBattalion'>12th parachute battalion</a></li>
+                <li><a href='index.php?page=uniformy&subpage=ww2&category=medaile'>Medaile a vyznamenání</a></li>
               </ul>";
 
 return $container;

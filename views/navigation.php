@@ -14,6 +14,7 @@ return "<ul>
                             <li><a href='index.php?page=uniformy&subpage=ww2&category=engeneers'>Royal Engineers</a></li>
                             <li><a href='index.php?page=uniformy&subpage=ww2&category=seaforth'>Seaforth Highlanders</a></li>
                             <li><a href='index.php?page=uniformy&subpage=ww2&category=12thParaBattalion'>12th parachute battalion</a></li>
+                            <li><a href='index.php?page=uniformy&subpage=ww2&category=medaile'>Medaile a vyznamenání</a></li>
                         </ul>
                     </li>
                 </ul>

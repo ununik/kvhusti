@@ -225,4 +225,31 @@ class Fotogalerie extends Connection
     }
     $image_save_func($tmp, "$targetFile.$new_image_ext");
   }
+  
+  public function updateAlbum($id, $title, $description, $date1, $date2)
+  {
+      $date1 =strtotime($date1);
+      $date2 =strtotime($date2);
+      if($date1 > $date2 && $date2 != 0) {
+          $save = $date1;
+          $date1 = $date2;
+          $date2 = $save;
+      }
+      
+      $result = parent::connect()->prepare("UPDATE `fotogalerie` SET `title`=:title,`description`=:description,`date`=:date,`date2`=:date2 WHERE `id`=:id");
+      $result->execute(array(
+              ':title' => $title,
+              ':description' => $description,
+              ':date' => $date1,
+              ':date2' => $date2,
+              ':id' => $id
+      ));
+  }
+  public function deleteFoto($id)
+  {
+      $result = parent::connect()->prepare("UPDATE `foto` SET `active`=0 WHERE `id` = :id ");
+      $result->execute(array(
+              ':id' => $id
+      ));
+  }
 }

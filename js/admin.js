@@ -150,3 +150,41 @@ function deleteZajem(id) {
 	mypostrequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
 	mypostrequest.send(parameters)
 }
+function deleteFoto(id) {
+	
+	var mypostrequest=new ajaxRequest()
+	mypostrequest.onreadystatechange=function(){
+	 if (mypostrequest.readyState==4){
+	  if (mypostrequest.status==200 || window.location.href.indexOf("http")==-1){
+		  location.reload();
+	  }
+	  else{
+	   alert("An error has occured making the request")
+	  }
+	 }
+	}
+	
+	parameters = 'id='+id;
+	mypostrequest.open("POST", "controllers/admin/foto/deleteFoto.php", true)
+	mypostrequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+	mypostrequest.send(parameters)
+}
+function delVlastniVyroba(id) {
+	var mypostrequest=new ajaxRequest()
+	mypostrequest.onreadystatechange=function(){
+	 if (mypostrequest.readyState==4){
+	  if (mypostrequest.status==200 || window.location.href.indexOf("http")==-1){
+		  //location.reload();
+	  }
+	  else{
+	   alert("An error has occured making the request")
+	  }
+	 }
+	}
+	
+	parameters = 'id='+id;
+	
+	mypostrequest.open("POST", "controllers/admin/homemade/deleteHomemade.php", true)
+	mypostrequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+	mypostrequest.send(parameters)
+}
